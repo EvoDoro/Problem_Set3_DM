@@ -2,3 +2,4 @@
 # Write a script that opens the file, uses a for loop to read through the file line by line and 
 calculates the highest water level and the date and time that was observed.
 
+#!/user/bin/env python 
