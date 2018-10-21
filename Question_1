@@ -3,3 +3,17 @@
 calculates the highest water level and the date and time that was observed.
 
 #!/user/bin/env python 
+fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+largest=None
+for line in fhand:
+        columns=line.split(',')
+        try:
+            	water_level=float(columns[1])
+        except:
+               	continue
+        if largest is None or water_level>largest:
+                largest=water_level
+                date_time=columns[0]
+
+print("Highest water level:", largest)
+print("Date and Time:",date_time)
