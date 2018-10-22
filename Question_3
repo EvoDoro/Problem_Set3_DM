@@ -1,1 +1,18 @@
 
+#!/user/bin/env python
+fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+max_diff=0 #defining the variables as zero. This must be done before the for loop to ensure that we are starting at the least value before it starts reading through the list 
+prev_line=0
+for line in fhand:
+        columns = line.split(',')#splitting the columns by the presence of the (',')
+        try:
+            	water_level=float(columns[1])#setting the water level values to be the values in the column in the first position 
+        except:
+               	continue #continue with the loop even though there will be a non-float header and a blank line 
+        if prev_line is not 0 and (water_level-prev_line)>max_diff: #if the prev_line is not zero tells it to only read prev_line values that are above zero,moving down the list, that way we dont get the first water level value because it is 2.58-0 and would obviously be the largest difference value 
+                max_diff=float(water_level-prev_line) #setting the max_diff value to be equal to the waterlevel-prevline calculation that was performed above 
+                date_time=columns[0]#assigns the date and time to the particular max_diff value identified above(will only get one corresponding date_time value because of its position in the loop)
+        prev_line=water_level
+print("Largest difference in water level between intervals:"max_diff)
+print("Date and Time of the greatest water level difference:"date_time)
+
