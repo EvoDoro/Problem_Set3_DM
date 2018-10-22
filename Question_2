@@ -1,1 +1,8 @@
+#!/user/bin/env python3
 
+import pandas as pd
+
+table = pd.read_csv('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+
+
+df.loc[df[‘ Water Level’].idxmax()]
