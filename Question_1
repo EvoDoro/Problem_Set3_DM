@@ -2,18 +2,20 @@
 # Write a script that opens the file, uses a for loop to read through the file line by line and 
 calculates the highest water level and the date and time that was observed.
 
-#!/user/bin/env python 
-fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
-largest=None
-for line in fhand:
-        columns=line.split(',')
-        try:
-            	water_level=float(columns[1])
-        except:
-               	continue
-        if largest is None or water_level>largest:
-                largest=water_level
-                date_time=columns[0]
 
-print("Highest water level:", largest)
+#!/user/bin/env python
+fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+#open the file in the correct path
+largest_water_level=None
+#setting the highest water level value to the empty variable None
+for line in fhand:
+        columns=line.split(',') #setting the variable to equal what is in between the (',')
+        try:
+            	water_level=float(columns[1]) #set the water levels to be the column in the first position on the csv 
+        except:
+               	continue #continue even if it encounters a non-float value
+        if largest_water_level is None or water_level>largest_water_level:
+                largest_water_level=water_level
+                date_time=columns[0]
+print("Highest water level:", largest_water_level)
 print("Date and Time:",date_time)
