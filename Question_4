@@ -2,8 +2,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-#Labels and Tit
+df = pd.read_csv("CO-OPS__8729108__wl.csv")#must include path for command line, for jupyter notebook just the file name 
+
 plt.title('Water Level Readings')
 plt.xlabel('Date Time')
-plt.ylabel('Water Level')
+plt.ylabel(' Water Level')
+plt.axis([
 plt.show()
