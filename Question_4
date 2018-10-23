@@ -1,1 +1,9 @@
 
+import matplotlib.pyplot as plt
+import pandas as pd
+
+#Labels and Tit
+plt.title('Water Level Readings')
+plt.xlabel('Date Time')
+plt.ylabel('Water Level')
+plt.show()
