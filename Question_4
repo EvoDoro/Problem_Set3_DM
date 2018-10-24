@@ -1,4 +1,4 @@
-!/usr/bin/env python3 
+#!/usr/bin/env python3 
 
 %matplotlib inline #make matplot lib compatable with Jupyter notebook 
 
