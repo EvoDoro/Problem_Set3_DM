@@ -13,6 +13,6 @@ for line in fhand:
                 max_diff=float(water_level-prev_line) #setting the max_diff value to be equal to the waterlevel-prevline calculation that was performed above 
                 date_time=columns[0]#assigns the date and time to the particular max_diff value identified above(will only get one corresponding date_time value because of its position in the loop)
         prev_line=water_level
-print("Largest difference in water level between intervals:",max_diff)
-print("Date and Time of the greatest water level difference:",date_time)
+print("Largest change in water level between intervals:",max_diff)
+print("Date and Time of the greatest water level change:",date_time)
 
