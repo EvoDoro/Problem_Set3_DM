@@ -3,7 +3,7 @@
 calculates the highest water level and the date and time that was observed.
 
 
-#!/user/bin/env python
+#!/user/bin/env python3
 fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
 #open the file in the correct path
 largest_water_level=None
