@@ -1,5 +1,5 @@
 
-#!/user/bin/env python
+#!/user/bin/env python3
 fhand = open('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv')
 max_diff=0 #defining the variables as zero. This must be done before the for loop to ensure that we are starting at the least value before it starts reading through the list 
 prev_line=0
