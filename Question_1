@@ -12,7 +12,7 @@ for line in fhand:
         try:
             	water_level=float(columns[1]) #set the water levels to be the column in the first position on the csv 
         except:
-               	continue #continue even if it encounters a non-float value
+                continue #continue even if it encounters a non-float value
         if largest_water_level is None or water_level>largest_water_level: #if the largest_water_level variable is empty or the water_level readings are greater than the largest_water level value as it  moves through the list, then set water_level to largest_water_level
                 largest_water_level=water_level
                 date_time=columns[0]
