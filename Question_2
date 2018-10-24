@@ -2,7 +2,7 @@
 
 import pandas as pd  #assumes that you already have python3 installed 
 
-water_table = pd.read_csv('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv) #opens the csv file with pandas and converts it to a readable table
+water_table = pd.read_csv('/ufrc/zoo6927/share/Class_Files/data/CO-OPS__8729108__wl.csv') 
 
 print(water_table.loc[water_table[' Water Level'].idxmax()]) #displays the max values from the water_table  along with the date and time that it was measured
 
